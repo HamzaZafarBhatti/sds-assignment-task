@@ -66,3 +66,17 @@ $route['logout'] = 'CustomerController/logout';
 $route['profile'] = 'CustomerController/profile';
 $route['update_profile'] = 'CustomerController/update_profile';
 $route['dashboard'] = 'CustomerController/dashboard';
+
+/* 
+
+Service Provider Routes
+
+*/
+$route['provider/register'] = 'ProviderController/register';
+$route['provider/do_register'] = 'ProviderController/do_register';
+$route['provider/login'] = 'ProviderController/login';
+$route['provider/do_login'] = 'ProviderController/do_login';
+$route['provider/logout'] = 'ProviderController/logout';
+$route['provider/profile'] = 'ProviderController/profile';
+$route['provider/update_profile'] = 'ProviderController/update_profile';
+$route['provider/dashboard'] = 'ProviderController/dashboard';
