@@ -52,3 +52,17 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+/* 
+
+Customer Routes
+
+*/
+$route['register'] = 'CustomerController/register';
+$route['do_register'] = 'CustomerController/do_register';
+$route['login'] = 'CustomerController/login';
+$route['do_login'] = 'CustomerController/do_login';
+$route['logout'] = 'CustomerController/logout';
+$route['profile'] = 'CustomerController/profile';
+$route['update_profile'] = 'CustomerController/update_profile';
+$route['dashboard'] = 'CustomerController/dashboard';
