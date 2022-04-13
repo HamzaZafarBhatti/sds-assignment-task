@@ -5,14 +5,17 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <div class="d-flex">
-                        <a class="nav-link active" aria-current="page" href="<?php echo site_url('/profile') ?>">Profile</a>
-                        <a class="nav-link active" aria-current="page" href="<?php echo site_url('/logout') ?>">Logout</a>
-                    </div>
+                    <a class="nav-link" id="order" aria-current="page" href="<?php echo site_url('orders') ?>">My Orders</a>
                 </li>
+                <!-- <li class="nav-item d-flex justify-content-between">
+                    </li> -->
             </ul>
+            <div class="d-flex" style="gap: 10px">
+                <a class="btn btn-outline-success" id="profile" type="button" aria-current="page" href="<?php echo site_url('profile') ?>">My Profile</a>
+                <a class="btn btn-outline-success" type="button" aria-current="page" href="<?php echo site_url('logout') ?>">Logout</a>
+            </div>
         </div>
     </div>
 </nav>

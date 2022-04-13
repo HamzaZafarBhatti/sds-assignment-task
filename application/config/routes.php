@@ -1,5 +1,5 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
+defined('BASEPATH') or exit('No direct script access allowed');
 
 /*
 | -------------------------------------------------------------------------
@@ -58,25 +58,48 @@ $route['translate_uri_dashes'] = FALSE;
 Customer Routes
 
 */
+// AUTH
 $route['register'] = 'CustomerController/register';
 $route['do_register'] = 'CustomerController/do_register';
 $route['login'] = 'CustomerController/login';
 $route['do_login'] = 'CustomerController/do_login';
 $route['logout'] = 'CustomerController/logout';
+// PROFILE
 $route['profile'] = 'CustomerController/profile';
 $route['update_profile'] = 'CustomerController/update_profile';
+//DASHBOARD
 $route['dashboard'] = 'CustomerController/dashboard';
+//Buy Service
+$route['buy_service/(:num)'] = 'CustomerController/buy_service/$1';
+$route['checkout'] = 'CustomerController/checkout';
+//ORDERS
+$route['orders'] = 'CustomerController/orders';
 
 /* 
 
 Service Provider Routes
 
 */
+// AUTH
 $route['provider/register'] = 'ProviderController/register';
 $route['provider/do_register'] = 'ProviderController/do_register';
 $route['provider/login'] = 'ProviderController/login';
 $route['provider/do_login'] = 'ProviderController/do_login';
 $route['provider/logout'] = 'ProviderController/logout';
+// PROFILE
 $route['provider/profile'] = 'ProviderController/profile';
 $route['provider/update_profile'] = 'ProviderController/update_profile';
+//DASHBOARD
 $route['provider/dashboard'] = 'ProviderController/dashboard';
+//SERVICES CRUD
+$route['provider/services'] = 'ProviderController/services';
+$route['provider/add_service'] = 'ProviderController/add_service';
+$route['provider/store_service'] = 'ProviderController/store_service';
+$route['provider/edit_service/(:num)'] = 'ProviderController/edit_service/$1';
+$route['provider/update_service/(:num)'] = 'ProviderController/update_service/$1';
+$route['provider/delete_service/(:num)'] = 'ProviderController/delete_service/$1';
+//ORDERS
+$route['provider/orders'] = 'ProviderController/orders';
+$route['provider/accept_order/(:num)'] = 'ProviderController/accept_order/$1';
+$route['provider/reject_order/(:num)'] = 'ProviderController/reject_order/$1';
+

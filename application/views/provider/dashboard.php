@@ -17,7 +17,32 @@
             <div class="card-body">
                 <?php $this->load->view('alert'); ?>
                 <div class="row">
-                    THIS IS SERVICE PROVIDER DASHBOARD
+                    <div class="col-md-4">
+                        <div class="card bg-success bg-gradient shadow">
+                            <div class="card-body">
+                                <h5 class="card-title">My Services</h5>
+                                <p class="card-text">Offering <?php echo $services_count ?> service(s)</p>
+                                <a type="button" class="btn btn-light" href="<?php echo site_url('provider/services') ?>" class="card-link">See All</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-info bg-gradient shadow">
+                            <div class="card-body">
+                                <h5 class="card-title">Orders</h5>
+                                <p class="card-text"><?php echo $orders_count ?> orders(s)</p>
+                                <a type="button" class="btn btn-light" href="<?php echo site_url('provider/orders') ?>" class="card-link">See All</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card bg-secondary bg-gradient shadow h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Balance</h5>
+                                <p class="card-text">$<?php echo $provider->balance ?></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

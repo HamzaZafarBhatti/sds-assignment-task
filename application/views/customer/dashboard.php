@@ -17,7 +17,60 @@
             <div class="card-body">
                 <?php $this->load->view('alert'); ?>
                 <div class="row">
-                    THIS IS CUSTOMER DASHBOARD
+                    <div class="col-md-6">
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="d-inline">Services</h4>
+                            </div>
+                            <div class="card-body">
+                                <table class="table table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Provider</th>
+                                            <th>Description</th>
+                                            <th>Price</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <?php
+                                        if ($services) :
+                                            foreach ($services as $item) :
+                                        ?>
+                                                <tr>
+                                                    <td><?php echo $item->name; ?></td>
+                                                    <td><?php echo $item->provider_name; ?></td>
+                                                    <td><?php echo $item->description; ?></td>
+                                                    <td>$<?php echo $item->price; ?></td>
+                                                    <td>
+                                                        <?php if ($item->status) : ?>
+                                                            <span class="badge rounded-pill bg-success">Active</span>
+                                                        <?php else : ?>
+                                                            <span class="badge rounded-pill bg-warning">Inactive</span>
+                                                        <?php endif; ?>
+                                                    </td>
+                                                    <td>
+                                                        <span><a type="button" class="btn btn-info" href="<?php echo site_url('buy_service/' . $item->id) ?>">Buy</a></span>
+                                                    </td>
+                                                </tr>
+                                            <?php
+                                            endforeach;
+                                        else :
+                                            ?>
+                                            <tr>
+                                                <td colspan="6">No Records Found</td>
+                                            </tr>
+                                        <?php
+                                        endif;
+                                        ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
